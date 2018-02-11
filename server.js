@@ -4,6 +4,7 @@ const moment = require('moment')
 const bodyParser = require('body-parser')
 var morgan = require('morgan')
 var cors = require('cors')
+const PORT = process.env.PORT || 3001
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -69,8 +70,6 @@ app.post('/api/persons', (req, res) => {
 
 })
 
-
-const PORT = 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
